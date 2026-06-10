@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIT Graph API</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="panel">
+        <div class="heading">
+          <h1>Graph Hierarchy Checker</h1>
+          <p class="intro">Sourav Singh - 23070122257</p>
+          <p>Enter edges one per line, comma separated, or as a JSON array.</p>
+        </div>
+
+        <label for="edges">Node edges</label>
+        <textarea id="edges" spellcheck="false">A->B
+A->C
+B->D
+C->E
+E->F
+X->Y
+Y->Z
+Z->X
+P->Q
+Q->R
+G->H
+G->H
+G->I
+hello
+1->2
+A-></textarea>
+
+        <div class="actions">
+          <button id="submitBtn" type="button">Submit</button>
+          <button id="sampleBtn" type="button" class="secondary">Load sample</button>
+        </div>
+
+        <p id="message" class="message"></p>
+      </section>
+
+      <section class="results">
+        <div class="summary" id="summary"></div>
+        <div id="hierarchies" class="hierarchies"></div>
+        <details class="raw">
+          <summary>Raw API response</summary>
+          <pre id="rawOutput">{}</pre>
+        </details>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
